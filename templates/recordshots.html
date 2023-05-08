@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Record Shots
+{% endblock %}
+<!-- Page to allow the user to input the result of a shot -->
+{% block main %}
+<h1>Record Shots</h1>
+    <p>Click the button that corresponds to the cup you made. 
+        <br>
+        Click "Miss" if you missed the shot.
+    </p>
+    <form action="/recordshots" method="post">
+        <div class = "form-group">
+            <!-- A button for every cup number in the reference graphic, as well as a button for misses -->
+            <input type="submit" type="button" value="1" name="shot">
+            <input type="submit" type="button" value="2" name="shot">
+            <input type="submit" type="button" value="3" name="shot">
+            <input type="submit" type="button" value="4" name="shot">
+            <input type="submit" type="button" value="5" name="shot">
+            <input type="submit" type="button" value="6" name="shot">
+            <input type="submit" type="button" value="7" name="shot">
+            <input type="submit" type="button" value="8" name="shot">
+            <input type="submit" type="button" value="9" name="shot">
+            <input type="submit" type="button" value="10" name="shot">
+            <input type="submit" type="button" value="Miss" name="shot" placeholder="Miss"> 
+        </div>
+    </form>
+    <br>
+    <p><img src="/static/rack.jpg" alt="Beer Pong" width="500" height="400"></p>
+{% endblock %}

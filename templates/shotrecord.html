@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shot Record
+{% endblock %}
+<!-- Page to display a users shot records -->
+{% block main %}
+<h1>Shot Records</h1>
+    <p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Shot Number</th>
+                    <th>Shot Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rows in shots %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td> {% if rows["shot"] == "Miss" %} Missed cup. 
+                             {% else %} Made cup number {{ rows["shot"] }}.
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
+{% endblock %}

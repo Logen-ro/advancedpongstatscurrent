@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Record Games
+{% endblock %}
+<!-- Page to allow the user to input the result of a game -->
+{% block main %}
+<h1>Record Games</h1>
+    <form action="/recordgames" method="post">
+        <div class = "form-group">
+            <input type="submit" type="button" value="Win" name="win">
+            <input type="submit" type="button" value="Loss" name="loss"> 
+        </div>
+    </form>
+    <br>
+{% endblock %}

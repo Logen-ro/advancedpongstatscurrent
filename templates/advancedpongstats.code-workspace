@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../Pictures/AdvancedPongStatsPictures"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "advancedpongstats"
+	}
+}

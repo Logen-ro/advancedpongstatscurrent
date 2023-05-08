@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Game Records
+{% endblock %}
+
+{% block main %}
+<h1>Game Records</h1>
+    <p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Game Number</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop to display the row number and conditionally display a w or l-->
+                {% for rows in games %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td> {% if rows["result"] == "Loss" %} L
+                             {% else %} W
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
+{% endblock %}

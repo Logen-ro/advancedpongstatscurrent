@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Percentages
+{% endblock %}
+<!-- Page to display a users shot and game data, as well as their win % and shot % -->
+{% block main %}
+<h1>Percentages</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Shots Taken</th>
+            <th>Shots Made</th>
+            <th>Shots Missed</th>
+            <th>ShotPercentage</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ shotstaken }}</td>
+            <td>{{ shotsmade }}</td>
+            <td>{{ shotsmissed }}</td>
+            <td>{{ percentage }}%</td>
+        </tr>
+        <td><br></td>
+        <tr>
+            <th>Games Played</th>
+            <th>Games Won</th>
+            <th>Games Lost</th>
+            <th>Win Percentage</th>
+        </tr>
+        <tr>
+            <td>{{ gamesplayed }}</td>
+            <td>{{ gameswon }}</td>
+            <td>{{ gameslost }}</td>
+            <td>{{ winpercentage }}%</td>
+        </tr>
+    </tbody>
+{% endblock %}
